@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC
+    "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- ============================================================= -->
+<!-- prochpform.php _ Part of a simple HTML_PHP forms system       -->
+<!-- Author:   OldCoder from http://oldcoder.org/                  -->
+<!-- License:  C.C. Attribution-ShareAlike 3.0 Unported            -->
+<!-- Revision: 120706                                              -->
+
+<!-- ============================================================= -->
+<!-- Start of document head.                                       -->
+
+<head>
+<title>Sample Form</title>
+
+<!-- ============================================================= -->
+<!-- CSS stylesheet section.                                       -->
+
+<style type="text/css">
+
+body {                          /* Document body                    */
+    font-family:       Helvetica, Arial, sans-serif;
+    font-size:         15px;
+    font-weight:       400;
+    height:            100%;
+    margin:             0;
+    padding:            0;
+    width:             100%;
+}
+
+.box {
+    margin-bottom:      30px;
+    margin-top:         30px;
+}
+
+.button {
+    border:            solid 1px #ddd;
+    border-radius:       3px;
+    color:             #555;
+    cursor:            pointer;
+    display:           inline-block;
+    font:              14px/100%;
+    font-weight:       600;
+    margin:             5px;
+    outline:           none;
+    padding:           0.50em 2.00em 0.55em;
+    text-align:        center;
+    text-decoration:   none;
+}
+
+.button:active {
+    position:          relative;
+    top:                 1px;
+}
+
+.button:hover {
+    text-decoration:   none;
+}
+
+.code {
+    color:             #aa6000;
+    font-weight:       bold;
+}
+
+.formintro {                    /* Form introduction text           */
+    border-bottom:     solid 1px #ccc;
+    padding-bottom:     10px;
+    padding-top:        10px;
+    text-align:        justify;
+}
+
+.separator {
+    border-bottom:     solid 1px #ccc;
+    height:             10px;
+    margin-bottom:      10px;
+    width:             550px;
+}
+
+.txtarea {
+    border:            solid 1px #ccc;
+    border-radius:       5px;
+    color:             #888;
+    height:            200px;
+    width:             395px;
+}
+
+.txtbox {
+    border:            solid 1px #ccc;
+    border-radius:       5px;
+    color:             #888;
+    height:             34px;
+    width:             400px;
+}
+
+.txtname {
+    color:             #aa6000;
+    display:           table-cell;
+    float:             left;
+    font-size:          15px;
+    font-weight:       bold;
+    height:             34px;
+    text-align:        center;
+    vertical-align:    middle;
+    width:             145px;
+}
+
+#content {                      /* Content div                      */
+    height:            800px;
+    padding:           10px 110px;
+    width:             550px;
+}
+
+#copyright {                    /* Copyright notice                 */
+    padding-bottom:     50px;
+    padding-right:      30px;
+    padding-top:        20px;
+    text-align:        right;
+}
+
+#formtitle {
+    font-size:          23px;
+    font-weight:       bold;
+}
+
+#header {                       /* Header div                       */
+    background-image:  url(prochpform.png);
+    background-repeat: no-repeat;
+    color:             #000088;
+    height:            125px;
+    padding:           20px 20px 10px 50px;
+}
+
+#sendbutton {
+    border-radius:       3px;
+    height:             50px;
+    margin:              5px 150px;
+    width:             100px;
+}
+</style>
+</head>
+
+<!-- ============================================================= -->
+<!-- Start of body.                                                -->
+
+<body>
+<div id="header">
+<p style="font-size:20px;">
+prochpform &mdash; Simple HTML-PHP forms framework</p>
+<p style="font-size:16px; font-style:italic;">
+Free and Open Source Of Course</p>
+</div>
+
+<div id="content">
+
+<!-- ============================================================= -->
+<!-- Explanation of form.                                          -->
+
+<br />
+<div id="formtitle">Put Your Form Title Here</div>
+<div class="separator"></div>
+
+<div class="formintro">
+<p>
+This is a demonstration of a simple HTML-PHP forms framework
+named <span class="code">prochpform.</span>
+</p><p>
+Fill in the fields and press the Send button. Fields marked
+with * are required.
+</p>
+</div>
+
+<!-- ============================================================= -->
+<!-- This is the form itself.                                      -->
+
+<form name="cform" method="post" action="prochpform.php">
+
+<div class="box">
+<div class="txtname"><p>Name*</p></div>
+<input id="name" name="name"
+       type="text" class="txtbox" />
+</div>
+
+<div class="box">
+<div class="txtname"><p>E-mail*</p></div>
+<input id="email" name="email"
+       type="text" class="txtbox"/>
+</div>
+
+<div class="box">
+<div class="txtname"><p>Food*</p></div>
+<input id="food" name="food"
+       type="text" class="txtbox"
+       value="(List some favorite foods)"/>
+</div>
+
+<div class="box">
+<div class="txtname"><p>Make a wish</p></div>
+<input id="wish" name="wish"
+       type="text" class="txtbox"/>
+</div>
+
+<div class="box">
+<div class="txtname"><p>Remarks</p></div>
+<textarea id="remarks" name="remarks"
+          cols="50" rows="4" class="txtarea"></textarea>
+</div>
+
+<div id="sendbutton">
+<input type="submit" name="Submit"
+       class="button" value="Send" />
+</div>
+
+</form>                         <!-- End of form                   -->
+
+<!-- ============================================================= -->
+<!-- Wrap things up.                                               -->
+
+</div>                          <!-- div end: content              -->
+
+<div id="copyright">Copyright &copy;
+2012 Put Your Name Here. All rights reserved.</div>
+
+</body>
+</html>

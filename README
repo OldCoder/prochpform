@@ -1,0 +1,122 @@
+prochpform notes                                       Revised: 120706
+----------------------------------------------------------------------
+
+1. Overview.
+
+"prochpform"  is a  tiny framework that  obtains  data  from a website
+visitor using a form and  displays the data,  emails it to a specified
+address, and/or stores it in a MySQL database.
+
+The framework consists of three files:
+
+      * an HTML file "prochpform.html"
+      * a PHP script "prochpform.php"
+      * a PNG image  "prochpform.png"
+
+The  HTML  file illustrates how a form may be set up  and used to send
+data to the PHP script.  The PHP script shows how data entered using a
+form may be  retrieved,  displayed,  emailed, and/or stored in a data-
+base.
+
+"prochpform" was created by OldCoder:
+
+      Site:    http://oldcoder.org/
+      Mail:    oldcoder@yahoo.com
+      GitHub:  https://github.com/OldCoder/
+      Repo:    https://github.com/OldCoder/prochpform.git
+
+The license used for the current version is  Creative Commons Attribu-
+tion-ShareAlike 3.0 Unported.
+
+----------------------------------------------------------------------
+
+2. History.
+
+Remarks by the original developer (OldCoder):
+
+In 2012, while I was volunteering as support for a webhost, a few peo-
+ple asked me how to make an  HTML form that could email the associated
+data or store it in a database. I found relevant  examples on the  Web
+but none that seemed  complete, simple, and documented enough to share
+with others. So I wrote "prochpform".
+
+----------------------------------------------------------------------
+
+3. Technical notes.
+
+3.1. By default, "prochpform.php" displays data but does  not email it
+or store it in a database. To enable the latter two features, edit the
+file and modify the parameters defined therein appropriately.
+
+3.2. The mail  feature can  only be used  on systems that  have  (a) a
+standard mail  system  installed and (b)  a copy of PHP  that has mail
+support enabled.
+
+3.3. The MySQL feature can  only be used  on systems that  have  (a) a
+copy of  MySQL installed and (b) a copy of PHP  that has MySQL support
+enabled.
+
+3.4. If  MySQL support is requested, the system administrator  is  re-
+sponsible  for creating a  database. The PHP program  handles the cre-
+ation of the required table.
+
+3.5. For MySQL support to work,  the $MYSQL_ parameters defined in the
+PHP file must be set  properly.  For more information, see the parame-
+ters in that file.
+
+3.6. If  MySQL support is requested,  and if  the set of fields speci-
+fied by the HTML form changes,  the existing  MySQL database will need
+to be deleted and recreated.
+
+3.7. The HTML form may contain  any reasonable  number of fields.  All
+fields may be optional or,  alternatively, one or more of  the  fields
+may be designated as "required". For more information, see the  param-
+eters in the PHP file.
+
+3.7. If the PHP script receives a  data value  that begins with a left
+parenthesis "(", it is assumed to be a "prompt"  string that the  HTML
+form displayed in the associated input field.  In this case, the value
+is discarded.
+
+----------------------------------------------------------------------
+
+4. Development.
+
+4.1. Source code.
+
+Full source code for the project is  provided in the same directory as
+this README file.
+
+4.2. Requirements.
+
+For software requirements, see the technical notes in section 3.
+
+4.3. Installation.
+
+No "build" is needed.
+
+To install this framework,  copy the following  three files as a group
+to some directory in a web-server document tree:
+
+      prochpform.html
+      prochpform.php
+      prochpform.png
+
+Note:  A second image file, named "screenshot.png", is provided.  This
+image is for informational purposes only and  does not need to  be in-
+stalled.
+
+The web-server directory used must be one where PHP files are support-
+ed.
+
+Edit the resulting copy of the PHP file  "prochpform.php".  Modify the
+parameter settings in the file appropriately.
+
+If you decide to enable MySQL support, note that you'll need to create
+whatever database you specify in the file.
+
+"chmod" the PHP file appropriately for the web-server used.
+
+If everything is set up correctly,  you should be able to  try out the
+framework by accessing the resulting copy of "prochpform.html" using a
+web browser.
